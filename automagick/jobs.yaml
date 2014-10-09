@@ -19,6 +19,8 @@
       - trigger-builds:
         - project: test-job-2
           current-parameters: true
+    triggers: 
+      - timed: "*/5 * * * *"
     parameters:
       - string:
           name: FOO
