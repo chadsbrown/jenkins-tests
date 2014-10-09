@@ -12,7 +12,21 @@
 
 - job:
     name: test-job-1
-    display-name: Fancy Name
+    display-name: Job One
+    description: "I am a fancy job that people use.  Don't edit me directly in Jenkins, or you will be sorry!"
+    builders:
+      - shell:  simple/crazy.sh
+      - trigger-builds:
+        - project: test-job-2
+    scm:
+      - git:
+          url: https://github.com/chadsbrown/jenkins-tests.git
+          branches:
+            - master
+
+- job:
+    name: test-job-2
+    display-name: Job Two
     description: "I am a fancy job that people use.  Don't edit me directly in Jenkins, or you will be sorry!"
     builders:
       - shell:  simple/crazy.sh
@@ -21,4 +35,3 @@
           url: https://github.com/chadsbrown/jenkins-tests.git
           branches:
             - master
-
