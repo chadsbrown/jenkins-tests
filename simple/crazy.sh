@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "crazy"
 
 echo -n "FOO is "
