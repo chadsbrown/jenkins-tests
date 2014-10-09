@@ -18,6 +18,10 @@
       - shell:  simple/crazy.sh
       - trigger-builds:
         - project: test-job-2
+    parameters:
+      - string:
+          name: FOO
+          default: bar
     scm:
       - git:
           url: https://github.com/chadsbrown/jenkins-tests.git
