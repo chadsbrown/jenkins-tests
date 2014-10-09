@@ -18,6 +18,7 @@
       - shell:  simple/crazy.sh
       - trigger-builds:
         - project: test-job-2
+            current-parameters: true
     parameters:
       - string:
           name: FOO
