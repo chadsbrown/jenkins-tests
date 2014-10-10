@@ -3,7 +3,7 @@
     display-name: Update Jobs
     description: "Meta job to rebuild local jenkins jobs.   Don't edit me directly in Jenkins!"
     builders:
-      - shell:  /usr/local/bin/jenkins-jobs update automagick/*
+      - shell:  /usr/local/bin/jenkins-jobs update automagick/meta.yaml
     scm:
       - git:
           url: https://github.com/chadsbrown/jenkins-tests.git
