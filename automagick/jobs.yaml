@@ -1,16 +1,4 @@
 - job:
-    name: jenkins-job-builder
-    display-name: Update Jobs
-    description: "Meta job to rebuild local jenkins jobs.   Don't edit me directly in Jenkins!"
-    builders:
-      - shell:  /usr/local/bin/jenkins-jobs update automagick/jobs.yaml
-    scm:
-      - git:
-          url: https://github.com/chadsbrown/jenkins-tests.git
-          branches:
-            - master
-
-- job:
     name: test-job-1
     display-name: Job One
     description: "I am a fancy job that people use.  Don't edit me directly in Jenkins, or you will be sorry!"
