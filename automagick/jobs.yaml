@@ -53,3 +53,14 @@
           url: https://github.com/chadsbrown/jenkins-tests.git
           branches:
             - master
+- job:
+    name: dev-job-3
+    display-name: New Job 3
+    description: "I am a fancy job that people use.  Don't edit me directly in Jenkins, or you will be sorry!"
+    builders:
+      - shell:  simple/crazy.sh
+    scm:
+      - git:
+          url: https://github.com/chadsbrown/jenkins-tests.git
+          branches:
+            - master
