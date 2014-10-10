@@ -1,2 +1,2 @@
-- defaults
-  environment: dev
+- defaults:
+    environment: dev
