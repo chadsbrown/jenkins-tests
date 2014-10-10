@@ -45,7 +45,7 @@
 
 - job:
     name: dev-job-1
-    display-name: Job Two
+    display-name: New Job 1
     description: "I am a fancy job that people use.  Don't edit me directly in Jenkins, or you will be sorry!"
     builders:
       - shell:  simple/crazy.sh
