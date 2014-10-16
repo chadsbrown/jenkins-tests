@@ -21,4 +21,4 @@ artifactUrl=$(curl -s https://circleci.com/api/v1/project/${account_name}/${proj
 echo ""
 echo  "${artifactUrl}"
 
-curl -o -s "$FileName"  "${artifactUrl}?circle-token=${CircleCIAPIToken}"
+curl -s -o "$FileName"  "${artifactUrl}?circle-token=${CircleCIAPIToken}"
