@@ -2,11 +2,12 @@
 
 # just a demonstration of grabbing a build artifcat from CircleCI
 
-BUILDNUMBER=$1
-project=$2
-CircleCIAPIToken=$3
-FileName=$4
-account_name=$5
+#jenkins should define these vars
+#BUILDNUMBER=
+#project=
+#CircleCIAPIToken=
+#FileName=
+#account_name=
 
 echo "**************************************"
 echo "buildNumber=${BUILDNUMBER}"
