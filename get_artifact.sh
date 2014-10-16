@@ -28,9 +28,8 @@ echo ""
 echo  "${artifactUrl}"
 
 curl -s -o "${DestPath}/${FileName}"  "${artifactUrl}?circle-token=${CircleCIAPIToken}"
-wait
 
 if [ "$Unzip" == "true" ]
 then
-  unzip "$DestPatah/$FileName"
+  unzip "${DestPath}/${FileName}"
 fi
