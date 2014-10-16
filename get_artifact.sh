@@ -9,6 +9,7 @@
 #FileName=
 #account_name=
 #DestPath
+#Unzip= (true|false, as a string)
 
 echo "**************************************"
 echo "buildNumber=${BUILDNUMBER}"
@@ -16,6 +17,7 @@ echo "project:${project}"
 echo "CircleCIAPIToken:${CircleCIAPIToken}"
 echo "FileName:${FileName}"
 echo "DestPath:${DestPath}"
+echo "Unzip:${Unzip}"
 echo "**************************************"
 echo ""
 echo "Retrieving:  $FileName"
@@ -24,3 +26,8 @@ echo ""
 echo  "${artifactUrl}"
 
 curl -s -o "$DestPath/$FileName"  "${artifactUrl}?circle-token=${CircleCIAPIToken}"
+
+if [ "$Unzip" == "true" ]
+then
+  unzip "$DestPatah/$FileName"
+fi
