@@ -8,12 +8,14 @@
 #CircleCIAPIToken=
 #FileName=
 #account_name=
+#DestPath
 
 echo "**************************************"
 echo "buildNumber=${BUILDNUMBER}"
 echo "project:${project}"
 echo "CircleCIAPIToken:${CircleCIAPIToken}"
 echo "FileName:${FileName}"
+echo "DestPath:${DestPath}"
 echo "**************************************"
 echo ""
 echo "Retrieving:  $FileName"
@@ -21,4 +23,4 @@ artifactUrl=$(curl -s https://circleci.com/api/v1/project/${account_name}/${proj
 echo ""
 echo  "${artifactUrl}"
 
-curl -s -o "$FileName"  "${artifactUrl}?circle-token=${CircleCIAPIToken}"
+curl -s -o "$DestPath/$FileName"  "${artifactUrl}?circle-token=${CircleCIAPIToken}"
