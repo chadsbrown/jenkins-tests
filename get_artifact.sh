@@ -31,5 +31,5 @@ curl -s -o "${DestPath}/${FileName}"  "${artifactUrl}?circle-token=${CircleCIAPI
 
 if [ "$Unzip" == "true" ]
 then
-  unzip "${DestPath}/${FileName}"
+  unzip -o "${DestPath}/${FileName}" -d "${DestPath}"
 fi
