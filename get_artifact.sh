@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # just a demonstration of grabbing a build artifcat from CircleCI
 
 #jenkins should define these vars
@@ -26,6 +28,7 @@ echo ""
 echo  "${artifactUrl}"
 
 curl -s -o "$DestPath/$FileName"  "${artifactUrl}?circle-token=${CircleCIAPIToken}"
+wait
 
 if [ "$Unzip" == "true" ]
 then
